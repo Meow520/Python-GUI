@@ -1,0 +1,70 @@
+TextWidget:
+<TextWidget>:
+    BoxLayout:
+        canvas:
+            Color: 
+                rgba: 0.9, 0.9, 0.9, 1
+            Rectangle: 
+                pos: self.pos
+                size: self.size
+
+        orientation: 'vertical'
+        size: root.size
+
+        BoxLayout:
+            size_hint_y: 0.2
+            padding: 40, 40, 40, 0
+            spacing: 40
+            Button:
+                text: "アイドル開始"
+                on_press: root.start_idle()
+            Button:
+                text: "アイドル停止"
+                on_press: root.stop_idle()
+            Button:
+                text: "ポーズリセット"
+                on_press: root.reset_pose()
+        
+        BoxLayout:
+            orientation: 'vertical'
+            padding: 40
+            size_hint_y: 0.8
+            BoxLayout:
+                padding: 0, 10, 0, 10
+                spacing: 100
+                Label:
+                    text: "こんにちは。ぼくはソータです。"
+                    color: 0, 0, 0, 1
+                Button:
+                    size_hint_x: 0.4
+                    text: "発話"
+                    on_press: root.say_text("こんにちは。ぼくはソータです。")
+            BoxLayout:
+                padding: 0, 10, 0, 10
+                spacing: 100
+                Label:
+                    text: "同志社大学文化情報学部へようこそ。"
+                    color: 0, 0, 0, 1
+                Button:
+                    size_hint_x: 0.4
+                    text: "発話"
+                    on_press: root.say_text("同志社大学文化情報学部へようこそ。")
+            BoxLayout:
+                padding: 0, 10, 0, 10
+                spacing: 100
+                Label:
+                    text: "これからどうぞ、よろしくお願いします。"
+                    color: 0, 0, 0, 1
+                Button:
+                    size_hint_x: 0.4
+                    text: "発話"
+                    on_press: root.say_text("これからどうぞ、よろしくお願いします。")
+            BoxLayout:
+                padding: 0, 10, 0, 10
+                spacing: 100
+                TextInput:
+                    id: text_box
+                Button:
+                    size_hint_x: 0.4
+                    text: "発話"
+                    on_press: root.free_speak()
