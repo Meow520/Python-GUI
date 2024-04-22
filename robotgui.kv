@@ -27,13 +27,15 @@ TextWidget:
         
         BoxLayout:
             orientation: 'vertical'
-            padding: 40
+            padding: 50
             size_hint_y: 0.8
             BoxLayout:
                 padding: 0, 10, 0, 10
                 spacing: 100
                 Label:
                     text: "こんにちは。ぼくはソータです。"
+                    text_size: self.size
+                    halign: "left"
                     color: 0, 0, 0, 1
                 Button:
                     size_hint_x: 0.4
@@ -44,6 +46,8 @@ TextWidget:
                 spacing: 100
                 Label:
                     text: "同志社大学文化情報学部へようこそ。"
+                    text_size: self.size
+                    halign: "left"
                     color: 0, 0, 0, 1
                 Button:
                     size_hint_x: 0.4
@@ -54,6 +58,8 @@ TextWidget:
                 spacing: 100
                 Label:
                     text: "これからどうぞ、よろしくお願いします。"
+                    text_size: self.size
+                    halign: "left"
                     color: 0, 0, 0, 1
                 Button:
                     size_hint_x: 0.4
